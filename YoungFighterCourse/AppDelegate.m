@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Organization.h"
 
 @interface AppDelegate ()
 
@@ -15,10 +16,35 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    return YES;
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+    Organization *organization = [[Organization alloc]initWithName:@"FaiFly"];
+    Employee *em = [[Employee alloc]initWithFirstName:@"Denis" AndLastName:@"Dudka" AndSalary:2600];
+    
+    NSLog(@"Add employee obj with Full Name = %@ and salary = %i", em.fullName, em.salary);
+    [organization  addEmployee:em];
+    
+    float avgSalary = [organization calculateAverageSalary];
+    NSLog(@"Avg salary for 1 employee %f", avgSalary);
+    
+    NSLog(@"Adding new employee");
+    [organization addEmployeeWithName:@"NeDenis"];
+    
+    float avgSalaryForTwo = [organization calculateAverageSalary];
+    NSLog(@"Avg salary for 2 employee %f", avgSalaryForTwo);
+    
+    Employee *lowestSalary = [organization employeeWithLowestSalary];
+    NSLog(@"Employee with lowest salary = %@, salary = %i", lowestSalary.fullName, lowestSalary.salary);
+    
+    int searchSalary = 2500;
+    int tolerance = 250;
+    NSArray<Employee*> *employeesWithTolerance = [organization employeesWithSalary:searchSalary Tolerance:tolerance];
+    NSLog(@"Employees with salary = %i, tolerance = %i", searchSalary, tolerance);
+    
+    for (Employee *eployee in employeesWithTolerance) {
+        NSLog(@"%@, salary = %i", eployee.fullName, eployee.salary);
+    }
 }
+
 
 
 #pragma mark - UISceneSession lifecycle
