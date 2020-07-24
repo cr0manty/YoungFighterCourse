@@ -14,6 +14,8 @@
     NSArray<Employee*> *employees;
 }
 
+@property (readonly, getter=employeeAmount) NSInteger employeesAmount;
+
 @property (nonatomic, readwrite) NSString* name;
 
 -(id)initWithName:(NSString*)orgName;
@@ -27,6 +29,10 @@
 -(Employee*)employeeWithLowestSalary;
 
 -(NSArray<Employee*>*) employeesWithSalary:(int)salary Tolerance:(int)tolerance;
+
+-(NSInteger) employeeAmount;
+
+-(Employee*) getEmployeeAtIndex:(NSInteger)index;
 
 @end
 

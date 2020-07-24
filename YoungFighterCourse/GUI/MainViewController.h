@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  YoungFighterCourse
 //
 //  Created by Денис on 24.07.2020.
@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Organization.h"
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
+
+@interface MainViewController : UITableViewController
 
 
 @end
 
+NS_ASSUME_NONNULL_END

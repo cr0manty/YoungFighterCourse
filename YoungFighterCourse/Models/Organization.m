@@ -69,4 +69,12 @@
     return newEmployees;
 }
 
+-(NSInteger) employeeAmount {
+    return employees.count;
+}
+
+-(Employee*) getEmployeeAtIndex:(NSInteger)index {
+    return employees[index];
+}
+
 @end
