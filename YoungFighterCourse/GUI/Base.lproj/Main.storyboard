@@ -7,6 +7,75 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Create Employee-->
+        <scene sceneID="UvY-gi-QY8">
+            <objects>
+                <viewController id="cAJ-mP-y0y" customClass="CreateEmployeeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ViD-mp-laf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8O-W4-dSt">
+                                <rect key="frame" x="20" y="124" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lGt-zZ-2jt">
+                                <rect key="frame" x="20" y="153" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ0-Xc-3WC">
+                                <rect key="frame" x="20" y="195" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sE3-mi-wh8">
+                                <rect key="frame" x="20" y="224" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="family-name"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-8r-3BW">
+                                <rect key="frame" x="20" y="266" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ni-AH-fl3">
+                                <rect key="frame" x="20" y="295" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FSh-9R-Ehp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Employee" id="Qol-YD-Krr">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="0El-iL-1Df">
+                            <connections>
+                                <action selector="createEmployee:" destination="cAJ-mP-y0y" id="Unp-uP-vpW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="firstName" destination="lGt-zZ-2jt" id="fFI-Rl-u7W"/>
+                        <outlet property="lastName" destination="sE3-mi-wh8" id="N3i-Up-aee"/>
+                        <outlet property="salary" destination="2ni-AH-fl3" id="3P0-Vg-lU6"/>
+                        <outlet property="saveClick" destination="0El-iL-1Df" id="V9k-7Q-nNJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTb-Xt-J4r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.71014492753625" y="-588.61607142857144"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="DAw-ta-z3e">
             <objects>
@@ -42,7 +111,13 @@
                             <outlet property="delegate" destination="AHi-28-O8T" id="7M2-oE-tTm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yEQ-tF-0BC"/>
+                    <navigationItem key="navigationItem" id="yEQ-tF-0BC">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="OO2-aM-sPb">
+                            <connections>
+                                <segue destination="cAJ-mP-y0y" kind="show" identifier="CreateEmployee" id="f3j-By-Y7z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="3BN-Xz-QUd" id="Tfv-su-eDB"/>
                     </connections>
@@ -70,7 +145,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Qid-P9-gUq"/>
+                    <navigationItem key="navigationItem" id="Qid-P9-gUq">
+                        <barButtonItem key="backBarButtonItem" title="bbb" id="y2L-FE-lNH"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="label" destination="21Q-Kd-kmD" id="92v-f4-Whr"/>
                     </connections>
@@ -98,4 +175,7 @@
             <point key="canvasLocation" x="-630.43478260869574" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

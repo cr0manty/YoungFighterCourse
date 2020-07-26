@@ -16,7 +16,7 @@
 @implementation AppDelegate
 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
+-(void) logTasks {
     Organization *organization = [[Organization alloc]initWithName:@"FaiFly"];
     Employee *em = [[Employee alloc]initWithFirstName:@"Denis" AndLastName:@"Dudka" AndSalary:2600];
     
@@ -45,7 +45,9 @@
     }
 }
 
-
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+//    [self logTasks];
+}
 
 #pragma mark - UISceneSession lifecycle
 

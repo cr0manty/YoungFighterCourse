@@ -8,8 +8,9 @@
 
 #import "MainViewController.h"
 #import "DetailViewController.h"
+#import "CreateEmployeeViewController.h"
 
-@interface MainViewController ()
+@interface MainViewController () <CreateEmployeeDelagate>
 
 @property (strong, nonatomic) Organization *organization;
 @property (weak, nonatomic) Employee *selectedEmployee;
@@ -68,7 +69,15 @@
     if ([segue.identifier isEqualToString:@"CellDetails"]) {
         DetailViewController *viewController = segue.destinationViewController;
         viewController.employee = [_organization getEmployeeAtIndex:indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"CreateEmployee"]) {
+        CreateEmployeeViewController *viewController = segue.destinationViewController;
+        viewController.delegate = self;
     }
+}
+
+-(void)addEmployee:(Employee*) employee {
+    [self.organization addEmployee: employee];
+    [self.tableView reloadData];
 }
 
 @end
