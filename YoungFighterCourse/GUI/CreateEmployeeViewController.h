@@ -7,15 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HSDatePickerViewController.h"
 
 @class Employee;
 
 @protocol CreateEmployeeDelagate <NSObject>
 
 @required
--(void)addEmployee:(NSString*) firstName LastName:(NSString*) lastName Salary: (int32_t) salary;
+-(void)addEmployee:(NSString*) firstName LastName:(NSString*) lastName Salary: (int32_t) salary  BirthDate : (NSDate *) date;
+
+@end
 
 
+@protocol HSDatePickerViewControllerDelegate <NSObject>
+- (void)hsDatePickerPickedDate:(NSDate *)date;
+@optional
+- (void)hsDatePickerWillDismissWithQuitMethod:(HSDatePickerQuitMethod)method;
+- (void)hsDatePickerDidDismissWithQuitMethod:(HSDatePickerQuitMethod)method;
 @end
 
 NS_ASSUME_NONNULL_BEGIN

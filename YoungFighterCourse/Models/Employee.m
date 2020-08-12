@@ -23,12 +23,13 @@
     }
 }
 
-+ (instancetype)initWithFirstName:(NSString*)first AndLastName:(NSString*)last AndSalary:(int)sal {
++ (instancetype)initWithFirstName:(NSString*)first AndLastName:(NSString*)last AndSalary:(int)sal AndDate:(NSDate *)date {
     Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
     
     employee.firstName = first;
     employee.lastName = last;
     employee.salary = sal;
+    employee.birthDate = date;
     
     return employee;
 }

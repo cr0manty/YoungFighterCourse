@@ -13,15 +13,25 @@
 @property (weak, nonatomic) IBOutlet UITextField *lastName;
 @property (weak, nonatomic) IBOutlet UITextField *salary;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveClick;
+@property (weak, nonatomic) IBOutlet UIButton *datePicker;
+@property (weak, nonatomic) IBOutlet UITextField *birthDate;
+
+@property (copy, nonatomic) NSDate *birthDateValue;
 
 @end
 
 @implementation CreateEmployeeViewController
 
+- (IBAction)openDatePicker:(id)sender {
+    HSDatePickerViewController *hsdpvc = [[HSDatePickerViewController alloc] init];
+    hsdpvc.delegate = self;
+
+    [self presentViewController:hsdpvc animated:YES completion:nil];
+}
 
 
 - (IBAction)createEmployee:(id)sender {
-    [self.delegate addEmployee: self.firstName.text LastName:self.lastName.text Salary: self.salary.text.intValue];
+    [self.delegate addEmployee: self.firstName.text LastName:self.lastName.text Salary: self.salary.text.intValue BirthDate:NSDate.now];
     [self.navigationController popViewControllerAnimated:true];
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -36,6 +46,14 @@
     }
     return context;
 }
+
+- (void)hsDatePickerPickedDate:(NSDate *)date
+{
+    self.birthDateValue = date;
+    self.birthDate.text = self.birthDateValue.description;
+//    [self.dateOfBirthButton setTitle:self.dateOfBirth.description forState:UIControlStateNormal];
+}
+
 
 /*
 #pragma mark - Navigation

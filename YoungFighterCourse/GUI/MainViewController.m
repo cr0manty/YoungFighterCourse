@@ -43,8 +43,8 @@
         _organization = [Organization initWithName:@"FaiFly"];
         [_organization addEmployeeWithName:@"Alexey Bondarchuk"];
 
-        Employee *denis = [Employee initWithFirstName:@"Denis" AndLastName:@"Dudka" AndSalary:2600];
-        Employee *ihor = [Employee initWithFirstName:@"Ihor" AndLastName:@"Embaievskyi" AndSalary:4000];
+        Employee *denis = [Employee initWithFirstName:@"Denis" AndLastName:@"Dudka" AndSalary:2600 AndDate:NSDate.now];
+        Employee *ihor = [Employee initWithFirstName:@"Ihor" AndLastName:@"Embaievskyi" AndSalary:4000 AndDate:NSDate.now];
 
         [_organization addEmployee:denis];
         [_organization addEmployee:ihor];
@@ -98,8 +98,8 @@
     }
 }
 
--(void)addEmployee:(NSString*) firstName LastName:(NSString*) lastName Salary: (int32_t) salary {
-    Employee *employee = [Employee initWithFirstName:firstName AndLastName:lastName AndSalary:salary];
+-(void)addEmployee:(NSString*) firstName LastName:(NSString*) lastName Salary: (int32_t) salary BirthDate : (NSDate *) date {
+    Employee *employee = [Employee initWithFirstName:firstName AndLastName:lastName AndSalary:salary AndDate:date];
     [self.organization addEmployee: employee];
     [DatabaseController saveContext];
     [self.tableView reloadData];

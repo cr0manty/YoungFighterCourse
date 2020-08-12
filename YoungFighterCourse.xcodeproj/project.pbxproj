@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A383B730D7A94F8B07AB831 /* Pods_YoungFighterCourse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73AB6E9E5EEDD201B7204A3C /* Pods_YoungFighterCourse.framework */; };
 		50130DBE24DD8AEF00DD2486 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A7D00A24DC1B4400AB8590 /* CoreData.framework */; };
 		50199DFF24E41B9800ADABC1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50199DFD24E41B9800ADABC1 /* SceneDelegate.m */; };
+		50199E0424E425A500ADABC1 /* Employee+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 50199E0224E425A500ADABC1 /* Employee+CoreDataClass.m */; };
+		50199E0524E425A500ADABC1 /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50199E0324E425A500ADABC1 /* Employee+CoreDataProperties.m */; };
 		503BC22524CB08ED0086D3AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC22424CB08ED0086D3AD /* AppDelegate.m */; };
 		503BC22B24CB08ED0086D3AD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC22A24CB08ED0086D3AD /* DetailViewController.m */; };
 		503BC22E24CB08ED0086D3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503BC22C24CB08ED0086D3AD /* Main.storyboard */; };
@@ -20,16 +23,19 @@
 		5083289124CDA31300CC7A7B /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5083289024CDA31300CC7A7B /* CreateEmployeeViewController.m */; };
 		50A990EC24E4118000860461 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50A990EA24E4118000860461 /* Model.xcdatamodeld */; };
 		50A990EF24E412DC00860461 /* DatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A990ED24E412DC00860461 /* DatabaseController.m */; };
-		50A9910124E4145C00860461 /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A990FA24E4145C00860461 /* Employee+CoreDataProperties.m */; };
 		50A9910224E4145C00860461 /* Organization+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A990FE24E4145C00860461 /* Organization+CoreDataProperties.m */; };
-		50A9910324E4145C00860461 /* Employee+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A990FF24E4145C00860461 /* Employee+CoreDataClass.m */; };
 		50A9910424E4145C00860461 /* Organization+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A9910024E4145C00860461 /* Organization+CoreDataClass.m */; };
 		50F97BA024CB159400DB71D0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F97B9F24CB159400DB71D0 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2528997E7EF51A1193727E2A /* Pods-YoungFighterCourse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoungFighterCourse.release.xcconfig"; path = "Target Support Files/Pods-YoungFighterCourse/Pods-YoungFighterCourse.release.xcconfig"; sourceTree = "<group>"; };
 		50199DFD24E41B9800ADABC1 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		50199DFE24E41B9800ADABC1 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		50199E0024E425A500ADABC1 /* Employee+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
+		50199E0124E425A500ADABC1 /* Employee+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataClass.h"; sourceTree = SOURCE_ROOT; };
+		50199E0224E425A500ADABC1 /* Employee+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataClass.m"; sourceTree = SOURCE_ROOT; };
+		50199E0324E425A500ADABC1 /* Employee+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
 		503BC22024CB08ED0086D3AD /* YoungFighterCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoungFighterCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		503BC22324CB08ED0086D3AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		503BC22424CB08ED0086D3AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,15 +57,13 @@
 		50A990ED24E412DC00860461 /* DatabaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseController.m; sourceTree = "<group>"; };
 		50A990EE24E412DC00860461 /* DatabaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseController.h; sourceTree = "<group>"; };
 		50A990F924E4145C00860461 /* Organization+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+CoreDataClass.h"; sourceTree = "<group>"; };
-		50A990FA24E4145C00860461 /* Employee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataProperties.m"; sourceTree = "<group>"; };
-		50A990FB24E4145C00860461 /* Employee+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataClass.h"; sourceTree = "<group>"; };
 		50A990FC24E4145C00860461 /* Organization+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+CoreDataProperties.h"; sourceTree = "<group>"; };
-		50A990FD24E4145C00860461 /* Employee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataProperties.h"; sourceTree = "<group>"; };
 		50A990FE24E4145C00860461 /* Organization+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+CoreDataProperties.m"; sourceTree = "<group>"; };
-		50A990FF24E4145C00860461 /* Employee+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataClass.m"; sourceTree = "<group>"; };
 		50A9910024E4145C00860461 /* Organization+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+CoreDataClass.m"; sourceTree = "<group>"; };
 		50F97B9E24CB159400DB71D0 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		50F97B9F24CB159400DB71D0 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5514EE38DA0DDB44BC02620D /* Pods-YoungFighterCourse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoungFighterCourse.debug.xcconfig"; path = "Target Support Files/Pods-YoungFighterCourse/Pods-YoungFighterCourse.debug.xcconfig"; sourceTree = "<group>"; };
+		73AB6E9E5EEDD201B7204A3C /* Pods_YoungFighterCourse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoungFighterCourse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50130DBE24DD8AEF00DD2486 /* CoreData.framework in Frameworks */,
+				0A383B730D7A94F8B07AB831 /* Pods_YoungFighterCourse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,7 @@
 				503BC22224CB08ED0086D3AD /* YoungFighterCourse */,
 				503BC22124CB08ED0086D3AD /* Products */,
 				50A7D00924DC1B4400AB8590 /* Frameworks */,
+				EC597E48675A096208792834 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,10 +113,10 @@
 		50604CB324E337180091D623 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				50A990FB24E4145C00860461 /* Employee+CoreDataClass.h */,
-				50A990FF24E4145C00860461 /* Employee+CoreDataClass.m */,
-				50A990FD24E4145C00860461 /* Employee+CoreDataProperties.h */,
-				50A990FA24E4145C00860461 /* Employee+CoreDataProperties.m */,
+				50199E0024E425A500ADABC1 /* Employee+CoreDataProperties.h */,
+				50199E0124E425A500ADABC1 /* Employee+CoreDataClass.h */,
+				50199E0224E425A500ADABC1 /* Employee+CoreDataClass.m */,
+				50199E0324E425A500ADABC1 /* Employee+CoreDataProperties.m */,
 				50A990F924E4145C00860461 /* Organization+CoreDataClass.h */,
 				50A9910024E4145C00860461 /* Organization+CoreDataClass.m */,
 				50A990FC24E4145C00860461 /* Organization+CoreDataProperties.h */,
@@ -124,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				50A7D00A24DC1B4400AB8590 /* CoreData.framework */,
+				73AB6E9E5EEDD201B7204A3C /* Pods_YoungFighterCourse.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,15 +164,24 @@
 		50F97B9D24CB155200DB71D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				50604CB324E337180091D623 /* CoreData */,
 				50A990EE24E412DC00860461 /* DatabaseController.h */,
 				50A990ED24E412DC00860461 /* DatabaseController.m */,
-				50604CB324E337180091D623 /* CoreData */,
 				503BC23D24CB091A0086D3AD /* Employee.h */,
 				503BC23F24CB091B0086D3AD /* Employee.m */,
 				503BC23C24CB091A0086D3AD /* Organization.h */,
 				503BC23E24CB091A0086D3AD /* Organization.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EC597E48675A096208792834 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5514EE38DA0DDB44BC02620D /* Pods-YoungFighterCourse.debug.xcconfig */,
+				2528997E7EF51A1193727E2A /* Pods-YoungFighterCourse.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 503BC23924CB08F00086D3AD /* Build configuration list for PBXNativeTarget "YoungFighterCourse" */;
 			buildPhases = (
+				F88B6BBA2761BCA5EBB6C6D6 /* [CP] Check Pods Manifest.lock */,
 				503BC21C24CB08ED0086D3AD /* Sources */,
 				503BC21D24CB08ED0086D3AD /* Frameworks */,
 				503BC21E24CB08ED0086D3AD /* Resources */,
+				DE805EFE7D98E813C66B02AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +251,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DE805EFE7D98E813C66B02AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoungFighterCourse/Pods-YoungFighterCourse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YoungFighterCourse/Pods-YoungFighterCourse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YoungFighterCourse/Pods-YoungFighterCourse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F88B6BBA2761BCA5EBB6C6D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YoungFighterCourse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		503BC21C24CB08ED0086D3AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,10 +304,10 @@
 				50199DFF24E41B9800ADABC1 /* SceneDelegate.m in Sources */,
 				503BC23624CB08F00086D3AD /* main.m in Sources */,
 				503BC24124CB091B0086D3AD /* Employee.m in Sources */,
-				50A9910124E4145C00860461 /* Employee+CoreDataProperties.m in Sources */,
 				5083289124CDA31300CC7A7B /* CreateEmployeeViewController.m in Sources */,
+				50199E0524E425A500ADABC1 /* Employee+CoreDataProperties.m in Sources */,
 				50F97BA024CB159400DB71D0 /* MainViewController.m in Sources */,
-				50A9910324E4145C00860461 /* Employee+CoreDataClass.m in Sources */,
+				50199E0424E425A500ADABC1 /* Employee+CoreDataClass.m in Sources */,
 				50A9910224E4145C00860461 /* Organization+CoreDataProperties.m in Sources */,
 				50A990EF24E412DC00860461 /* DatabaseController.m in Sources */,
 				503BC24024CB091B0086D3AD /* Organization.m in Sources */,
@@ -389,6 +449,7 @@
 		};
 		503BC23A24CB08F00086D3AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5514EE38DA0DDB44BC02620D /* Pods-YoungFighterCourse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,6 +468,7 @@
 		};
 		503BC23B24CB08F00086D3AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2528997E7EF51A1193727E2A /* Pods-YoungFighterCourse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

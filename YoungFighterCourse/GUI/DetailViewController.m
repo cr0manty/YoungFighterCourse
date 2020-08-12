@@ -21,7 +21,13 @@
     [super viewDidLoad];
     
     self.title = self.employee.fullName;
-    self.label.text = [NSString stringWithFormat:@"%@'s salary is %i", self.employee.fullName, self.employee.salary];
+    NSString *text = [NSString stringWithFormat:@"%@'s salary is %i", self.employee.fullName, self.employee.salary];
+    
+    if (self.employee.birthDate != nil) {
+        text = [text stringByAppendingFormat:@"\n\nDate of Birth:\n %@", self.employee.birthDate.description];
+    }
+    
+    self.label.text = text;
 }
 
 

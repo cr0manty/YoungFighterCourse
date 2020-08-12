@@ -1,0 +1,21 @@
+PODS:
+  - HSDatePickerViewController (1.0.4)
+
+DEPENDENCIES:
+  - HSDatePickerViewController (from `https://github.com/kamilpowalowski/HSDatePickerViewController.git`)
+
+EXTERNAL SOURCES:
+  HSDatePickerViewController:
+    :git: https://github.com/kamilpowalowski/HSDatePickerViewController.git
+
+CHECKOUT OPTIONS:
+  HSDatePickerViewController:
+    :commit: e011c715af9fcffa60e26cb02a03137930fe0c77
+    :git: https://github.com/kamilpowalowski/HSDatePickerViewController.git
+
+SPEC CHECKSUMS:
+  HSDatePickerViewController: 5a72b71f8c3b10e76f2c28a898f8572b551432a6
+
+PODFILE CHECKSUM: d83b99d22f658c28037916dfaead0fc8d86d9c38
+
+COCOAPODS: 1.9.3

@@ -8,7 +8,6 @@
 //
 
 #import "Employee+CoreDataClass.h"
-#import "Organization.h"
 
 @implementation Employee
 

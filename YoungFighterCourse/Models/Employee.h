@@ -15,7 +15,7 @@
 
 - (NSString*)getFullName;
 
-+ (instancetype)initWithFirstName:(NSString*)first AndLastName:(NSString*)las AndSalary:(int)sal;
++ (instancetype)initWithFirstName:(NSString*)first AndLastName:(NSString*)las AndSalary:(int)sal AndDate:(NSDate*) date;
 
 @end
 

@@ -28,7 +28,7 @@
     int salary = (int)10 + arc4random() % (490+1) * 10;
     NSString *lastName = names.count > 1 ? names[1] : nil;
     
-    Employee *employee = [Employee initWithFirstName:names[0] AndLastName:lastName AndSalary:salary];
+    Employee *employee = [Employee initWithFirstName:names[0] AndLastName:lastName AndSalary:salary AndDate:NSDate.now];
     
     [self addEmployeesObject:employee];
 }

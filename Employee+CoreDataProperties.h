@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *firstName;
 @property (nullable, nonatomic, copy) NSString *lastName;
 @property (nonatomic) int32_t salary;
+@property (nullable, nonatomic, copy) NSDate *birthDate;
 @property (nullable, nonatomic, retain) Organization *organization;
 
 @end
