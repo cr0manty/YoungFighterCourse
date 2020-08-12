@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		503BC23624CB08F00086D3AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC23524CB08F00086D3AD /* main.m */; };
 		503BC24024CB091B0086D3AD /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC23E24CB091A0086D3AD /* Organization.m */; };
 		503BC24124CB091B0086D3AD /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC23F24CB091B0086D3AD /* Employee.m */; };
+		5045AE8424E434C800617BB2 /* OrganizationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5045AE8324E434C800617BB2 /* OrganizationInfoViewController.swift */; };
 		5083289124CDA31300CC7A7B /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5083289024CDA31300CC7A7B /* CreateEmployeeViewController.m */; };
 		50A990EC24E4118000860461 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50A990EA24E4118000860461 /* Model.xcdatamodeld */; };
 		50A990EF24E412DC00860461 /* DatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A990ED24E412DC00860461 /* DatabaseController.m */; };
@@ -50,6 +51,8 @@
 		503BC23D24CB091A0086D3AD /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		503BC23E24CB091A0086D3AD /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
 		503BC23F24CB091B0086D3AD /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		5045AE8224E434C800617BB2 /* YoungFighterCourse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YoungFighterCourse-Bridging-Header.h"; sourceTree = "<group>"; };
+		5045AE8324E434C800617BB2 /* OrganizationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationInfoViewController.swift; sourceTree = "<group>"; };
 		5083288F24CDA31300CC7A7B /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		5083289024CDA31300CC7A7B /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
 		50A7D00A24DC1B4400AB8590 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -157,6 +160,8 @@
 				503BC22A24CB08ED0086D3AD /* DetailViewController.m */,
 				5083288F24CDA31300CC7A7B /* CreateEmployeeViewController.h */,
 				5083289024CDA31300CC7A7B /* CreateEmployeeViewController.m */,
+				5045AE8324E434C800617BB2 /* OrganizationInfoViewController.swift */,
+				5045AE8224E434C800617BB2 /* YoungFighterCourse-Bridging-Header.h */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -217,11 +222,12 @@
 				TargetAttributes = {
 					503BC21F24CB08ED0086D3AD = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
 			buildConfigurationList = 503BC21B24CB08ED0086D3AD /* Build configuration list for PBXProject "YoungFighterCourse" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -312,6 +318,7 @@
 				50A990EF24E412DC00860461 /* DatabaseController.m in Sources */,
 				503BC24024CB091B0086D3AD /* Organization.m in Sources */,
 				50A990EC24E4118000860461 /* Model.xcdatamodeld in Sources */,
+				5045AE8424E434C800617BB2 /* OrganizationInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +378,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -391,6 +399,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = YoungFighterCourse;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -429,6 +438,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -442,6 +452,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_MODULE_NAME = YoungFighterCourse;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -452,7 +463,9 @@
 			baseConfigurationReference = 5514EE38DA0DDB44BC02620D /* Pods-YoungFighterCourse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = AEP675C638;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = YoungFighterCourse/Info.plist;
@@ -462,6 +475,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cr0manty.YoungFighterCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YoungFighterCourse/GUI/YoungFighterCourse-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -471,7 +487,9 @@
 			baseConfigurationReference = 2528997E7EF51A1193727E2A /* Pods-YoungFighterCourse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = AEP675C638;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = YoungFighterCourse/Info.plist;
@@ -481,6 +499,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cr0manty.YoungFighterCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YoungFighterCourse/GUI/YoungFighterCourse-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

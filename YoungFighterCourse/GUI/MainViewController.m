@@ -12,6 +12,7 @@
 #import "Organization.h"
 #import "Employee.h"
 #import "DatabaseController.h"
+#import "YoungFighterCourse-Swift.h"
 
 
 
@@ -19,7 +20,7 @@
 
 @property (strong, nonatomic) Organization *organization;
 @property (weak, nonatomic) Employee *selectedEmployee;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+//@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -77,7 +78,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.organization removeEmployeeAtIndex:indexPath.row];
+        [self.organization removeEmployeeAtIndex:(int)indexPath.row];
         [tableView reloadData];
     }
 }
@@ -95,6 +96,9 @@
     } else if ([segue.identifier isEqualToString:@"CreateEmployee"]) {
         CreateEmployeeViewController *viewController = segue.destinationViewController;
         viewController.delegate = self;
+//    } else if ([segue.identifier isEqualToString:@"SalarySum"]) {
+//        OrganizationInfoViewController *organizationInfoViewController = segue.destinationViewController;
+//        organizationInfoViewController.organization = self.organization;
     }
 }
 
