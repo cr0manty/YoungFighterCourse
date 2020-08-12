@@ -7,7 +7,6 @@
 //
 
 #import "CreateEmployeeViewController.h"
-#import "Employee.h"
 
 @interface CreateEmployeeViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *firstName;
@@ -19,17 +18,24 @@
 
 @implementation CreateEmployeeViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+
+
 - (IBAction)createEmployee:(id)sender {
-    Employee *employee = [[Employee alloc] initWithFirstName:self.firstName.text AndLastName:self.lastName.text AndSalary:self.salary.text.intValue];
-    [self.delegate addEmployee: employee];
+    [self.delegate addEmployee: self.firstName.text LastName:self.lastName.text Salary: self.salary.text.intValue];
     [self.navigationController popViewControllerAnimated:true];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 
 }
 
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 /*
 #pragma mark - Navigation

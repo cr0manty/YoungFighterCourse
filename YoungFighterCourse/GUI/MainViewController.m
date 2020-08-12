@@ -9,6 +9,11 @@
 #import "MainViewController.h"
 #import "DetailViewController.h"
 #import "CreateEmployeeViewController.h"
+#import "Organization.h"
+#import "Employee.h"
+#import "DatabaseController.h"
+
+
 
 @interface MainViewController () <CreateEmployeeDelagate>
 
@@ -22,21 +27,29 @@
 
 @synthesize organization = _organization;
 
-- (void)viewDidLoad {
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
     [self initOrganization];
-    self.title = _organization.name;
+    self.title = self.organization.name;
 }
 
 - (void)initOrganization {
-    _organization = [[Organization alloc]initWithName:@"FaiFly"];
-    [_organization addEmployeeWithName:@"Alexey Bondarchuk"];
+    self.organization = [DatabaseController requestResultsForPredicate:nil sortDescriptors:nil entity:@"Organization"].firstObject;
     
-    Employee *denis = [[Employee alloc]initWithFirstName:@"Denis" AndLastName:@"Dudka" AndSalary:2600];
-    Employee *ihor = [[Employee alloc]initWithFirstName:@"Ihor" AndLastName:@"Embaievskyi" AndSalary:4000];
-    
-    [_organization addEmployee:denis];
-    [_organization addEmployee:ihor];
+    if (!self.organization) {
+        _organization = [Organization initWithName:@"FaiFly"];
+        [_organization addEmployeeWithName:@"Alexey Bondarchuk"];
+
+        Employee *denis = [Employee initWithFirstName:@"Denis" AndLastName:@"Dudka" AndSalary:2600];
+        Employee *ihor = [Employee initWithFirstName:@"Ihor" AndLastName:@"Embaievskyi" AndSalary:4000];
+
+        [_organization addEmployee:denis];
+        [_organization addEmployee:ihor];
+        [DatabaseController saveContext];
+    }
 }
 
 #pragma mark - Table view data source
@@ -46,7 +59,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _organization.employeeAmount;
+    return self.organization.employees.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -58,6 +71,16 @@
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.organization removeEmployeeAtIndex:indexPath.row];
+        [tableView reloadData];
+    }
+}
 
 #pragma mark - Navigation
 
@@ -75,8 +98,10 @@
     }
 }
 
--(void)addEmployee:(Employee*) employee {
+-(void)addEmployee:(NSString*) firstName LastName:(NSString*) lastName Salary: (int32_t) salary {
+    Employee *employee = [Employee initWithFirstName:firstName AndLastName:lastName AndSalary:salary];
     [self.organization addEmployee: employee];
+    [DatabaseController saveContext];
     [self.tableView reloadData];
 }
 

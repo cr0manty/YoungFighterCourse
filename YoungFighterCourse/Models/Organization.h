@@ -6,23 +6,24 @@
 //  Copyright © 2020 cr0manty. All rights reserved.
 //
 
-#ifndef Organization_h
-#define Organization_h
-#import "Employee.h"
+#import <Foundation/Foundation.h>
+#import "Organization+CoreDataClass.h"
 
-@interface Organization : NSObject {
-    NSArray<Employee*> *employees;
-}
+@class Employee;
+
+@interface Organization(Custom)
 
 @property (readonly, getter=employeeAmount) NSInteger employeesAmount;
 
 @property (nonatomic, readwrite) NSString* name;
 
--(id)initWithName:(NSString*)orgName;
++(instancetype)initWithName:(NSString*)orgName;
 
 -(void)addEmployee:(Employee*)employee;
 
 -(void)addEmployeeWithName:(NSString*)employeeName;
+
+-(void)removeEmployeeAtIndex:(int)index;
 
 -(float)calculateAverageSalary;
 
@@ -36,5 +37,3 @@
 
 @end
 
-
-#endif /* Organization_h */

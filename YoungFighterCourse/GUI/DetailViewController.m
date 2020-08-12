@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "Employee.h"
+
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;

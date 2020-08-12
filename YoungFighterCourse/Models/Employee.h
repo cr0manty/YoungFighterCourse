@@ -6,22 +6,16 @@
 //  Copyright © 2020 cr0manty. All rights reserved.
 //
 
-#ifndef Employee_h
-#define Employee_h
+#import <Foundation/Foundation.h>
+#import "Employee+CoreDataClass.h"
 
-@interface Employee : NSObject {
-    NSString *firstName;
-    NSString *lastName;
-}
+@interface Employee(Custom)
 
-@property (nonatomic, readwrite) int salary;
 @property (readonly, getter=getFullName) NSString* fullName;
 
--(NSString*)getFullName;
+- (NSString*)getFullName;
 
--(id)initWithFirstName:(NSString*)first AndLastName:(NSString*)las AndSalary:(int)sal;
++ (instancetype)initWithFirstName:(NSString*)first AndLastName:(NSString*)las AndSalary:(int)sal;
 
 @end
 
-
-#endif /* Employee_h */

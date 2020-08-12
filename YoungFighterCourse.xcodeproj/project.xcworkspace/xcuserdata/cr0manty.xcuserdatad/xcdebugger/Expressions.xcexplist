@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[DetailViewController viewDidLoad]:DetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.employee.fullName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[MainViewController prepareForSegue:sender:]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -11,10 +19,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[DetailViewController viewDidLoad]:DetailViewController.m">
+         contextName = "-[MainViewController initOrganization]:MainViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.employee.fullName">
+               value = "[managedObjectContext executeFetchRequest:fetchRequest]">
+            </PersistentString>
+            <PersistentString
+               value = "[[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

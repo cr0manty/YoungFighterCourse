@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CreateEmployeeDelagate.h"
+
+@class Employee;
+
+@protocol CreateEmployeeDelagate <NSObject>
+
+@required
+-(void)addEmployee:(NSString*) firstName LastName:(NSString*) lastName Salary: (int32_t) salary;
+
+
+@end
 
 NS_ASSUME_NONNULL_BEGIN
 

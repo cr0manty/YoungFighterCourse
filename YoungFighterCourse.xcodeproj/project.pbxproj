@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50130DBE24DD8AEF00DD2486 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A7D00A24DC1B4400AB8590 /* CoreData.framework */; };
+		50199DFF24E41B9800ADABC1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50199DFD24E41B9800ADABC1 /* SceneDelegate.m */; };
 		503BC22524CB08ED0086D3AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC22424CB08ED0086D3AD /* AppDelegate.m */; };
-		503BC22824CB08ED0086D3AD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC22724CB08ED0086D3AD /* SceneDelegate.m */; };
 		503BC22B24CB08ED0086D3AD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC22A24CB08ED0086D3AD /* DetailViewController.m */; };
 		503BC22E24CB08ED0086D3AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503BC22C24CB08ED0086D3AD /* Main.storyboard */; };
 		503BC23024CB08F00086D3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 503BC22F24CB08F00086D3AD /* Assets.xcassets */; };
@@ -17,15 +18,21 @@
 		503BC24024CB091B0086D3AD /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC23E24CB091A0086D3AD /* Organization.m */; };
 		503BC24124CB091B0086D3AD /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BC23F24CB091B0086D3AD /* Employee.m */; };
 		5083289124CDA31300CC7A7B /* CreateEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5083289024CDA31300CC7A7B /* CreateEmployeeViewController.m */; };
+		50A990EC24E4118000860461 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50A990EA24E4118000860461 /* Model.xcdatamodeld */; };
+		50A990EF24E412DC00860461 /* DatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A990ED24E412DC00860461 /* DatabaseController.m */; };
+		50A9910124E4145C00860461 /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A990FA24E4145C00860461 /* Employee+CoreDataProperties.m */; };
+		50A9910224E4145C00860461 /* Organization+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A990FE24E4145C00860461 /* Organization+CoreDataProperties.m */; };
+		50A9910324E4145C00860461 /* Employee+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A990FF24E4145C00860461 /* Employee+CoreDataClass.m */; };
+		50A9910424E4145C00860461 /* Organization+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A9910024E4145C00860461 /* Organization+CoreDataClass.m */; };
 		50F97BA024CB159400DB71D0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F97B9F24CB159400DB71D0 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50199DFD24E41B9800ADABC1 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		50199DFE24E41B9800ADABC1 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		503BC22024CB08ED0086D3AD /* YoungFighterCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoungFighterCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		503BC22324CB08ED0086D3AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		503BC22424CB08ED0086D3AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		503BC22624CB08ED0086D3AD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		503BC22724CB08ED0086D3AD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		503BC22924CB08ED0086D3AD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		503BC22A24CB08ED0086D3AD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		503BC22D24CB08ED0086D3AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,7 +46,18 @@
 		503BC23F24CB091B0086D3AD /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		5083288F24CDA31300CC7A7B /* CreateEmployeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeViewController.h; sourceTree = "<group>"; };
 		5083289024CDA31300CC7A7B /* CreateEmployeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateEmployeeViewController.m; sourceTree = "<group>"; };
-		5083289324CDAC4500CC7A7B /* CreateEmployeeDelagate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateEmployeeDelagate.h; sourceTree = "<group>"; };
+		50A7D00A24DC1B4400AB8590 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		50A990EB24E4118000860461 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		50A990ED24E412DC00860461 /* DatabaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseController.m; sourceTree = "<group>"; };
+		50A990EE24E412DC00860461 /* DatabaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseController.h; sourceTree = "<group>"; };
+		50A990F924E4145C00860461 /* Organization+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+CoreDataClass.h"; sourceTree = "<group>"; };
+		50A990FA24E4145C00860461 /* Employee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataProperties.m"; sourceTree = "<group>"; };
+		50A990FB24E4145C00860461 /* Employee+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataClass.h"; sourceTree = "<group>"; };
+		50A990FC24E4145C00860461 /* Organization+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Organization+CoreDataProperties.h"; sourceTree = "<group>"; };
+		50A990FD24E4145C00860461 /* Employee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataProperties.h"; sourceTree = "<group>"; };
+		50A990FE24E4145C00860461 /* Organization+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+CoreDataProperties.m"; sourceTree = "<group>"; };
+		50A990FF24E4145C00860461 /* Employee+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataClass.m"; sourceTree = "<group>"; };
+		50A9910024E4145C00860461 /* Organization+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Organization+CoreDataClass.m"; sourceTree = "<group>"; };
 		50F97B9E24CB159400DB71D0 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		50F97B9F24CB159400DB71D0 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50130DBE24DD8AEF00DD2486 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +79,7 @@
 			children = (
 				503BC22224CB08ED0086D3AD /* YoungFighterCourse */,
 				503BC22124CB08ED0086D3AD /* Products */,
+				50A7D00924DC1B4400AB8590 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +94,7 @@
 		503BC22224CB08ED0086D3AD /* YoungFighterCourse */ = {
 			isa = PBXGroup;
 			children = (
+				50A7D00F24DC1B8400AB8590 /* Storyboards */,
 				50F97B9D24CB155200DB71D0 /* Models */,
 				50F97B9C24CB153500DB71D0 /* GUI */,
 				503BC22F24CB08F00086D3AD /* Assets.xcassets */,
@@ -83,22 +104,52 @@
 			path = YoungFighterCourse;
 			sourceTree = "<group>";
 		};
+		50604CB324E337180091D623 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				50A990FB24E4145C00860461 /* Employee+CoreDataClass.h */,
+				50A990FF24E4145C00860461 /* Employee+CoreDataClass.m */,
+				50A990FD24E4145C00860461 /* Employee+CoreDataProperties.h */,
+				50A990FA24E4145C00860461 /* Employee+CoreDataProperties.m */,
+				50A990F924E4145C00860461 /* Organization+CoreDataClass.h */,
+				50A9910024E4145C00860461 /* Organization+CoreDataClass.m */,
+				50A990FC24E4145C00860461 /* Organization+CoreDataProperties.h */,
+				50A990FE24E4145C00860461 /* Organization+CoreDataProperties.m */,
+				50A990EA24E4118000860461 /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		50A7D00924DC1B4400AB8590 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50A7D00A24DC1B4400AB8590 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50A7D00F24DC1B8400AB8590 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				503BC22C24CB08ED0086D3AD /* Main.storyboard */,
+				503BC23124CB08F00086D3AD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		50F97B9C24CB153500DB71D0 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				50199DFE24E41B9800ADABC1 /* SceneDelegate.h */,
+				50199DFD24E41B9800ADABC1 /* SceneDelegate.m */,
+				503BC22324CB08ED0086D3AD /* AppDelegate.h */,
 				503BC22424CB08ED0086D3AD /* AppDelegate.m */,
-				5083289324CDAC4500CC7A7B /* CreateEmployeeDelagate.h */,
-				503BC22624CB08ED0086D3AD /* SceneDelegate.h */,
-				503BC22724CB08ED0086D3AD /* SceneDelegate.m */,
-				503BC22924CB08ED0086D3AD /* DetailViewController.h */,
 				50F97B9E24CB159400DB71D0 /* MainViewController.h */,
 				50F97B9F24CB159400DB71D0 /* MainViewController.m */,
+				503BC22924CB08ED0086D3AD /* DetailViewController.h */,
 				503BC22A24CB08ED0086D3AD /* DetailViewController.m */,
 				5083288F24CDA31300CC7A7B /* CreateEmployeeViewController.h */,
 				5083289024CDA31300CC7A7B /* CreateEmployeeViewController.m */,
-				503BC22C24CB08ED0086D3AD /* Main.storyboard */,
-				503BC23124CB08F00086D3AD /* LaunchScreen.storyboard */,
-				503BC22324CB08ED0086D3AD /* AppDelegate.h */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -106,6 +157,9 @@
 		50F97B9D24CB155200DB71D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				50A990EE24E412DC00860461 /* DatabaseController.h */,
+				50A990ED24E412DC00860461 /* DatabaseController.m */,
+				50604CB324E337180091D623 /* CoreData */,
 				503BC23D24CB091A0086D3AD /* Employee.h */,
 				503BC23F24CB091B0086D3AD /* Employee.m */,
 				503BC23C24CB091A0086D3AD /* Organization.h */,
@@ -184,14 +238,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A9910424E4145C00860461 /* Organization+CoreDataClass.m in Sources */,
 				503BC22B24CB08ED0086D3AD /* DetailViewController.m in Sources */,
 				503BC22524CB08ED0086D3AD /* AppDelegate.m in Sources */,
+				50199DFF24E41B9800ADABC1 /* SceneDelegate.m in Sources */,
 				503BC23624CB08F00086D3AD /* main.m in Sources */,
 				503BC24124CB091B0086D3AD /* Employee.m in Sources */,
+				50A9910124E4145C00860461 /* Employee+CoreDataProperties.m in Sources */,
 				5083289124CDA31300CC7A7B /* CreateEmployeeViewController.m in Sources */,
 				50F97BA024CB159400DB71D0 /* MainViewController.m in Sources */,
-				503BC22824CB08ED0086D3AD /* SceneDelegate.m in Sources */,
+				50A9910324E4145C00860461 /* Employee+CoreDataClass.m in Sources */,
+				50A9910224E4145C00860461 /* Organization+CoreDataProperties.m in Sources */,
+				50A990EF24E412DC00860461 /* DatabaseController.m in Sources */,
 				503BC24024CB091B0086D3AD /* Organization.m in Sources */,
+				50A990EC24E4118000860461 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AEP675C638;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = YoungFighterCourse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,6 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AEP675C638;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = YoungFighterCourse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,6 +445,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		50A990EA24E4118000860461 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				50A990EB24E4118000860461 /* Model.xcdatamodel */,
+			);
+			currentVersion = 50A990EB24E4118000860461 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 503BC21824CB08ED0086D3AD /* Project object */;
 }

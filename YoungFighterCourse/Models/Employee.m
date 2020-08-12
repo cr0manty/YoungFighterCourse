@@ -6,31 +6,31 @@
 //  Copyright © 2020 cr0manty. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#include "Employee.h"
+#import "Employee.h"
+#import "DatabaseController.h"
 
 
-@implementation Employee
+@implementation Employee(Custom)
 
-@synthesize salary;
 
--(NSString*)getFullName {
-    if (!lastName) {
-        return firstName;
-    } else if(!firstName) {
-        return lastName;
+- (NSString*)getFullName {
+    if (!self.lastName) {
+        return self.firstName;
+    } else if(!self.firstName) {
+        return self.lastName;
     } else {
-        return [firstName stringByAppendingFormat:@" %@", lastName];
+        return [self.firstName stringByAppendingFormat:@" %@", self.lastName];
     }
 }
 
--(id)initWithFirstName:(NSString*)first AndLastName:(NSString*)last AndSalary:(int)sal {
-    if (self = [super init]) {
-        firstName = first;
-        lastName = last;
-        salary = sal;
-    }
-    return self;
++ (instancetype)initWithFirstName:(NSString*)first AndLastName:(NSString*)last AndSalary:(int)sal {
+    Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:[DatabaseController sharedInstance].context];
+    
+    employee.firstName = first;
+    employee.lastName = last;
+    employee.salary = sal;
+    
+    return employee;
 }
 
 @end
