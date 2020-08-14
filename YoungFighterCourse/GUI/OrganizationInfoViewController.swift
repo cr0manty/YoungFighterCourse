@@ -10,7 +10,7 @@ import UIKit
 
 class OrganizationInfoViewController : UIViewController
 {
-    var organization: Organization!
+    @objc var organization: Organization!
     var salarySum: Int32?
     
     @IBAction func calculateSalary(_ sender: Any) {

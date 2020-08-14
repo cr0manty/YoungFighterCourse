@@ -96,9 +96,9 @@
     } else if ([segue.identifier isEqualToString:@"CreateEmployee"]) {
         CreateEmployeeViewController *viewController = segue.destinationViewController;
         viewController.delegate = self;
-//    } else if ([segue.identifier isEqualToString:@"SalarySum"]) {
-//        OrganizationInfoViewController *organizationInfoViewController = segue.destinationViewController;
-//        organizationInfoViewController.organization = self.organization;
+    } else if ([segue.identifier isEqualToString:@"SalarySum"]) {
+        OrganizationInfoViewController *organizationInfoViewController = segue.destinationViewController;
+        organizationInfoViewController.organization = self.organization;
     }
 }
 
