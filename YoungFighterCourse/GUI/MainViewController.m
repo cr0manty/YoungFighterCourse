@@ -35,6 +35,13 @@
     
     [self initOrganization];
     self.title = self.organization.name;
+        
+    [[NSNotificationCenter defaultCenter] addObserver:self.tableView selector:@selector(reloadData) name:OrganizationInfoViewController.kEmployeesOrderHasChanged object:nil];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self.tableView name:OrganizationInfoViewController.kEmployeesOrderHasChanged object:nil];
 }
 
 - (void)initOrganization {
@@ -66,7 +73,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BasicCell" forIndexPath:indexPath];
     
-    Employee *employee = [_organization getEmployeeAtIndex:indexPath.row];
+    Employee *employee = self.organization.employeesWithOrder[indexPath.row];
     cell.textLabel.text = employee.fullName;
     
     return cell;

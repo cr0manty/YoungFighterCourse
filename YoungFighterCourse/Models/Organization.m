@@ -83,4 +83,41 @@
     }
 }
 
+- (NSArray<Employee *> *)employeesWithOrder
+{
+
+    
+    NSSortDescriptor *orderDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"index" ascending:true];
+    return [self.employees sortedArrayUsingDescriptors:@[orderDescriptor]];
+}
+
+- (void)shuffleEmployees
+{
+    NSUInteger count = [self.employees count];
+    if (count <= 1) return;
+    NSMutableArray *newEmployees = [self.employees allObjects];
+    
+    [self removeEmployees:self.employees];
+    
+    NSMutableArray *indexes = [[NSMutableArray alloc] initWithCapacity:count];
+    for (int i = 0; i < count; i++) [indexes addObject:[NSNumber numberWithInt:i]];
+    NSMutableArray *shuffle = [[NSMutableArray alloc] initWithCapacity:count];
+    while ([indexes count])
+    {
+        int index = arc4random() % [indexes count];
+        [shuffle addObject:[indexes objectAtIndex:index]];
+        [indexes removeObjectAtIndex:index];
+    }
+    
+    for (int i = 0; i < count; i++) {
+        int16_t exchangeIndex = [[shuffle objectAtIndex:i] intValue];
+        
+        Employee *employee = [newEmployees objectAtIndex:exchangeIndex];
+        employee.index = exchangeIndex;
+        [self addEmployeesObject:employee];
+    }
+}
+
+
+
 @end

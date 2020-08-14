@@ -35,5 +35,9 @@
 
 -(Employee*) getEmployeeAtIndex:(NSInteger)index;
 
+- (NSArray<Employee *> *)employeesWithOrder;
+
+- (void)shuffleEmployees;
+
 @end
 

@@ -3,6 +3,7 @@
     <entity name="Employee" representedClassName="Employee" syncable="YES">
         <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="salary" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="organization" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="employees" inverseEntity="Organization"/>
@@ -12,7 +13,7 @@
         <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="organization" inverseEntity="Employee"/>
     </entity>
     <elements>
-        <element name="Employee" positionX="-54" positionY="0" width="128" height="118"/>
+        <element name="Employee" positionX="-54" positionY="0" width="128" height="133"/>
         <element name="Organization" positionX="-63" positionY="-18" width="128" height="73"/>
     </elements>
 </model>

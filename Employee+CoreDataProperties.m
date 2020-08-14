@@ -20,5 +20,6 @@
 @dynamic salary;
 @dynamic birthDate;
 @dynamic organization;
+@dynamic index;
 
 @end

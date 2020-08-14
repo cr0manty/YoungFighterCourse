@@ -226,6 +226,14 @@
                                     <action selector="calculateSalary:" destination="EEf-0u-yh5" eventType="touchDown" id="LGj-jM-vPI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-4D-hI7">
+                                <rect key="frame" x="114" y="233" width="187" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Randomize order"/>
+                                <connections>
+                                    <action selector="randomizeOrder:" destination="EEf-0u-yh5" eventType="touchDown" id="mha-GS-k7S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iKE-OH-Jsz"/>
