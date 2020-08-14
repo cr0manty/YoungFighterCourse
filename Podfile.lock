@@ -1,8 +1,14 @@
 PODS:
+  - Alamofire (5.2.2)
   - HSDatePickerViewController (1.0.4)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - HSDatePickerViewController (from `https://github.com/kamilpowalowski/HSDatePickerViewController.git`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
 
 EXTERNAL SOURCES:
   HSDatePickerViewController:
@@ -14,8 +20,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/kamilpowalowski/HSDatePickerViewController.git
 
 SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   HSDatePickerViewController: 5a72b71f8c3b10e76f2c28a898f8572b551432a6
 
-PODFILE CHECKSUM: d83b99d22f658c28037916dfaead0fc8d86d9c38
+PODFILE CHECKSUM: f2a523b944bd5194d5c8f946ef28424a2759b137
 
 COCOAPODS: 1.9.3

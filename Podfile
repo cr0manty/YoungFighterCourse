@@ -6,5 +6,5 @@ target 'YoungFighterCourse' do
   use_frameworks!
 
   pod 'HSDatePickerViewController', :git => 'https://github.com/kamilpowalowski/HSDatePickerViewController.git'
-
+  pod 'Alamofire', '~> 5.2'
 end

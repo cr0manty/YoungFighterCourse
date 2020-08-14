@@ -218,24 +218,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87y-t8-Rbo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87y-t8-Rbo">
                                 <rect key="frame" x="98" y="163" width="218" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate salary sum"/>
                                 <connections>
                                     <action selector="calculateSalary:" destination="EEf-0u-yh5" eventType="touchDown" id="LGj-jM-vPI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-4D-hI7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-4D-hI7">
                                 <rect key="frame" x="114" y="233" width="187" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Randomize order"/>
                                 <connections>
                                     <action selector="randomizeOrder:" destination="EEf-0u-yh5" eventType="touchDown" id="mha-GS-k7S"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va8-w0-wbE">
+                                <rect key="frame" x="140" y="303" width="135" height="30"/>
+                                <state key="normal" title="Fetch organizations"/>
+                                <connections>
+                                    <action selector="fetchOrganization:" destination="EEf-0u-yh5" eventType="touchDown" id="sDC-w5-jDZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="va8-w0-wbE" firstAttribute="top" secondItem="mQN-4D-hI7" secondAttribute="bottom" constant="40" id="3xy-rT-Nga"/>
+                            <constraint firstItem="va8-w0-wbE" firstAttribute="leading" secondItem="iKE-OH-Jsz" secondAttribute="leading" constant="140" id="A5x-c6-4sD"/>
+                            <constraint firstItem="iKE-OH-Jsz" firstAttribute="trailing" secondItem="va8-w0-wbE" secondAttribute="trailing" constant="139" id="aJd-Vd-hu4"/>
+                            <constraint firstItem="iKE-OH-Jsz" firstAttribute="trailing" secondItem="mQN-4D-hI7" secondAttribute="trailing" constant="113" id="acR-f3-q9S"/>
+                            <constraint firstItem="87y-t8-Rbo" firstAttribute="top" secondItem="iKE-OH-Jsz" secondAttribute="top" constant="75" id="f8X-Ct-MGl"/>
+                            <constraint firstItem="87y-t8-Rbo" firstAttribute="leading" secondItem="iKE-OH-Jsz" secondAttribute="leading" constant="98" id="fl3-yf-juE"/>
+                            <constraint firstItem="mQN-4D-hI7" firstAttribute="leading" secondItem="iKE-OH-Jsz" secondAttribute="leading" constant="114" id="m04-Tk-Nwn"/>
+                            <constraint firstItem="mQN-4D-hI7" firstAttribute="top" secondItem="87y-t8-Rbo" secondAttribute="bottom" constant="40" id="t36-07-jhp"/>
+                            <constraint firstItem="iKE-OH-Jsz" firstAttribute="trailing" secondItem="87y-t8-Rbo" secondAttribute="trailing" constant="98" id="xbc-18-wyc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iKE-OH-Jsz"/>
                     </view>
                     <navigationItem key="navigationItem" id="FAd-Ae-ykF"/>

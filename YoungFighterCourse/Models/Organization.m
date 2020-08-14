@@ -13,11 +13,25 @@
 @implementation Organization(Custom)
 
 
-+ (instancetype)initWithName:(NSString*)orgName{
++ (instancetype)initWithName:(NSString*)orgName {
     Organization *organization = [NSEntityDescription insertNewObjectForEntityForName:@"Organization" inManagedObjectContext:[DatabaseController sharedInstance].context];
     organization.name = orgName;
     return organization;
 }
+
++ (instancetype)createFromJson:(NSDictionary *)data {
+    NSString *name = data[@"name"];
+    Organization *ogranization = [Organization initWithName:name];
+    
+    for (NSDictionary *employee in data[@"employees"]) {
+        Employee *emp = [Employee createFromJson:employee];
+        emp.index = employee[@"order"];
+        [ogranization addEmployeesObject:emp];
+    }
+    
+    return ogranization;
+}
+
 
 -(void)addEmployee:(Employee*)employee {
     [self addEmployeesObject:employee];

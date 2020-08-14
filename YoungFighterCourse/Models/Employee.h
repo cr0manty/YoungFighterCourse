@@ -17,5 +17,7 @@
 
 + (instancetype)initWithFirstName:(NSString*)first AndLastName:(NSString*)las AndSalary:(int)sal AndDate:(NSDate*) date;
 
++ (instancetype)createFromJson:(NSDictionary *)data;
+
 @end
 

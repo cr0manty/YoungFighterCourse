@@ -19,6 +19,8 @@
 
 +(instancetype)initWithName:(NSString*)orgName;
 
++ (instancetype)createFromJson:(NSDictionary *)data;
+
 -(void)addEmployee:(Employee*)employee;
 
 -(void)addEmployeeWithName:(NSString*)employeeName;

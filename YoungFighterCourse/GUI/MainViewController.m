@@ -20,7 +20,7 @@
 
 @property (strong, nonatomic) Organization *organization;
 @property (weak, nonatomic) Employee *selectedEmployee;
-//@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -90,6 +90,11 @@
     }
 }
 
+-(void)editCallback:(Organization*) organization {
+    self.organization = organization;
+    [self.tableView reloadData];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -106,6 +111,10 @@
     } else if ([segue.identifier isEqualToString:@"SalarySum"]) {
         OrganizationInfoViewController *organizationInfoViewController = segue.destinationViewController;
         organizationInfoViewController.organization = self.organization;
+        organizationInfoViewController.selectOrganization = ^(Organization *organization) {
+            self.organization = organization;
+            [self.tableView reloadData];
+        };
     }
 }
 

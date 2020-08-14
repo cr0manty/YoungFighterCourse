@@ -34,4 +34,14 @@
     return employee;
 }
 
++ (instancetype)createFromJson:(NSDictionary *)data {
+    NSString *firstName = data[@"first_name"];
+    NSString *lastName = data[@"last_name"];
+    int salary = data[@"salary"];
+    int index = data[@"order"];
+    Employee *employee = [Employee initWithFirstName: firstName AndLastName:lastName AndSalary:salary AndDate: NSDate.now];
+    employee.index = index;
+    return employee;
+}
+
 @end
