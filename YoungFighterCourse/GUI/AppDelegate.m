@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Employee.h"
 #import "Organization.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [SVProgressHUD setDefaultMaskType: SVProgressHUDMaskTypeBlack];
     return true;
 }
 

@@ -31,7 +31,7 @@ class OrganizationInfoViewController : UIViewController
         SVProgressHUD.show()
         
         DispatchQueue.global(qos: .userInitiated).async {
-            let fibNum = 300 // 100 000 fibonachi number?
+            let fibNum = 10 // 100 000 fibonachi number?
             let fibonachiValue = self.fibonachi(fibNum)
             DispatchQueue.main.async {
                 SVProgressHUD.dismiss()
