@@ -1,28 +1,46 @@
 PODS:
   - Alamofire (5.2.2)
+  - BigNumber (2.0)
   - HSDatePickerViewController (1.0.4)
+  - SVProgressHUD (2.2.6):
+    - SVProgressHUD/Core (= 2.2.6)
+  - SVProgressHUD/Core (2.2.6)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - BigNumber (from `https://github.com/mkrd/Swift-Big-Integer.git`)
   - HSDatePickerViewController (from `https://github.com/kamilpowalowski/HSDatePickerViewController.git`)
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
 
 SPEC REPOS:
   trunk:
     - Alamofire
 
 EXTERNAL SOURCES:
+  BigNumber:
+    :git: https://github.com/mkrd/Swift-Big-Integer.git
   HSDatePickerViewController:
     :git: https://github.com/kamilpowalowski/HSDatePickerViewController.git
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 CHECKOUT OPTIONS:
+  BigNumber:
+    :commit: 5533c9147cfaa18f655fa8366854c93445f16e41
+    :git: https://github.com/mkrd/Swift-Big-Integer.git
   HSDatePickerViewController:
     :commit: e011c715af9fcffa60e26cb02a03137930fe0c77
     :git: https://github.com/kamilpowalowski/HSDatePickerViewController.git
+  SVProgressHUD:
+    :commit: 0a9abb56a8d5c1ffc0078babc07fb11ff2fa2f22
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  BigNumber: bcc393c06b3e7e2752e5121be58c032c45c6f36b
   HSDatePickerViewController: 5a72b71f8c3b10e76f2c28a898f8572b551432a6
+  SVProgressHUD: de812b4f0e1d65358f0064416473174ae619843f
 
-PODFILE CHECKSUM: f2a523b944bd5194d5c8f946ef28424a2759b137
+PODFILE CHECKSUM: 1b620dbd7cf78de440b3b92f75371cd12543a105
 
 COCOAPODS: 1.9.3

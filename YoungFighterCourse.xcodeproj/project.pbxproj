@@ -475,6 +475,7 @@
 				DEVELOPMENT_TEAM = AEP675C638;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = YoungFighterCourse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +500,7 @@
 				DEVELOPMENT_TEAM = AEP675C638;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = YoungFighterCourse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
